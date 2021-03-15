@@ -56,15 +56,4 @@ class BinarySearchTest {
     SearchResult searchResult = BinarySearch.search(key, seq);
     Assertions.assertTrue(searchResult.isFound() == false && searchResult.getPosition() == -1);
   }
-
-  @Test
-  void should_thorw_IllegalArgumentException() {
-    int key = 1;
-    int[] seq = new int[0];
-    Assertions.assertThrows(
-        IllegalArgumentException.class,
-        () -> {
-          BinarySearch.search(key, seq);
-        });
-  }
 }
